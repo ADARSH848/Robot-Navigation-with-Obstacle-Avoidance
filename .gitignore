@@ -1,8 +1,7 @@
-# ROS 2 & Python Ignore List
-__pycache__/
-*.py[cod]
 build/
 install/
 log/
+__pycache__/
+*.py[cod]
 .vscode/
 .colcon/
