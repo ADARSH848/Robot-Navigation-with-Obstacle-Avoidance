@@ -29,17 +29,24 @@ This project implements a modular autonomous navigation stack designed for diffe
 
 # 1. Create Workspace
 mkdir -p ~/10x_ws/src
+
 cd ~/10x_ws/src
+
 git clone [https://github.com/ADARSH848/Robot-Navigation-with-Obstacle-Avoidance.git](https://github.com/ADARSH848/Robot-Navigation-with-Obstacle-Avoidance.git)
 
 # 2. Build
 cd ~/10x_ws
+
 colcon build --packages-select navigation_assignment
+
 source install/setup.bash
 
 Running the DemoFollow these steps to replicate the "Inspection Circuit" results:Terminal 1: Launch SimulationBashexport TURTLEBOT3_MODEL=burger
+
 ros2 launch turtlebot3_gazebo empty_world.launch.py
+
 Terminal 2: Spawn Site & Run RobotBashcd ~/10x_ws
+
 source install/setup.bash
 
 # 1. Spawn Procedural Construction Site (Barriers & Barrels)
@@ -47,7 +54,9 @@ ros2 run navigation_assignment site_loader
 
 # 2. Launch Navigation Stack
 ros2 launch navigation_assignment navigation.launch.py
+
 Terminal 3: Validation & AnalysisBashcd ~/10x_ws
+
 source install/setup.bash
 
 # Run Unit Tests (Before Sim)
@@ -56,5 +65,14 @@ python3 src/navigation_assignment/navigation_assignment/test_spline.py
 # Run Plotter (After Sim - Press Ctrl+C when robot stops)
 python3 src/navigation_assignment/navigation_assignment/plot_results.py
 
+Output Images:
+
+<img width="1847" height="1048" alt="Screenshot from 2025-11-20 20-23-19" src="https://github.com/user-attachments/assets/6147a16c-262d-45ae-bf9a-816ffb70b0b1" />
+
+<img width="1847" height="1048" alt="Screenshot from 2025-11-20 20-25-35" src="https://github.com/user-attachments/assets/9475ae5a-ac4d-4ebd-aca2-095795863d9e" />
+
+<img width="1000" height="600" alt="trajectory_comparison" src="https://github.com/user-attachments/assets/9799a24f-8b18-405e-ba9f-7ced60578f42" />
+
+<img width="1000" height="400" alt="error_analysis" src="https://github.com/user-attachments/assets/f861e896-fe01-4254-83d4-cfb59a461c6b" />
 
 
