@@ -41,21 +41,29 @@ colcon build --packages-select navigation_assignment
 
 source install/setup.bash
 
-Running the DemoFollow these steps to replicate the "Inspection Circuit" results:Terminal 1: Launch SimulationBashexport TURTLEBOT3_MODEL=burger
+Running the DemoFollow these steps to replicate the "Inspection Circuit" results:Terminal 1: Launch Simulation
+
+export TURTLEBOT3_MODEL=burger
 
 ros2 launch turtlebot3_gazebo empty_world.launch.py
 
-Terminal 2: Spawn Site & Run RobotBashcd ~/10x_ws
+
+# 1. Spawn Procedural Construction Site (Barriers & Barrels)
+
+Terminal 2: Spawn Site & Run Robot
+
+cd ~/10x_ws
 
 source install/setup.bash
 
-# 1. Spawn Procedural Construction Site (Barriers & Barrels)
 ros2 run navigation_assignment site_loader
 
 # 2. Launch Navigation Stack
 ros2 launch navigation_assignment navigation.launch.py
 
-Terminal 3: Validation & AnalysisBashcd ~/10x_ws
+Terminal 3: Validation & Analysis
+
+cd ~/10x_ws
 
 source install/setup.bash
 
