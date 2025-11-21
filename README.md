@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 **Author:** Adarsh Anand
-**Role:** Robotics Software Apprentice Assignment - 10xConstruction
+**Role:** Robot Navigation with Obstacle Avoidance
 
 ## 1. Executive Summary
 This project implements a modular autonomous navigation stack designed for differential drive robots in construction environments. Addressing the requirements for **path smoothing**, **trajectory generation**, and **trajectory tracking**, the solution features:
